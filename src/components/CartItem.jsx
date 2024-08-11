@@ -5,8 +5,8 @@ import { remove } from '../redux/slices/CartSlice';
 import toast from 'react-hot-toast';
 
 const CartItem = ({item}) => {
-
-    const dispatch = useDispatch()
+ 
+    const dispatch = useDispatch();
 
     function removeFromCart(){
         dispatch(remove(item.id));
@@ -25,9 +25,9 @@ const CartItem = ({item}) => {
 
                 <div className='flex items-center justify-between'>
                     <p className='font-bold text-lg text-blue-600'>${item.price}</p>
-                    <div onClick={removeFromCart} className='bg-red-200 group hover:bg-red-400 transition-transform duration-300 cursor-pointer rounded-full p-3 mr-3'> 
-                        <MdDelete className='text-red-800 group-hover:text-white'/>
-                    </div> 
+                        <div onClick={removeFromCart} className='bg-red-200 group hover:bg-red-400 transition-transform duration-300 cursor-pointer rounded-full p-3 mr-3'> 
+                            <MdDelete className='text-red-800 group-hover:text-white'/>
+                        </div>                    
                 </div>
             </div>
         </div> 
